@@ -1,0 +1,63 @@
+/*reset css 重置样式*/
+*,
+::before,
+::after{
+	/*选中所有的元素和伪元素*/
+	margin: 0;
+	padding: 0;
+	/*针对移动端的*/
+	box-sizing: border-box;
+	/*兼容主流浏览器*/
+	-webkit-box-sizing: border-box;
+	/*点击高亮效果 值透明，颜色的话就是这个颜色的效果*/
+	-webkit-tap-highlight-color:transparent;
+}
+body{
+	font-size: 14px;
+	color: #333;
+	font-family: 'Microsoft Yahei';
+}
+ul, ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+input,textarea{
+	outline: none;
+	border: none;
+	/*不允许右下角的拖动改变框大小的功能*/
+	resize: none;
+	/*清除掉默认的属性*/
+	-webkit-appearance:none;
+}
+/*common css 公用样式*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix::before, .clearfix:after{
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+
+	clear: both;
+}
+.m-l10{
+	margin-left: 10px;
+}
+.m-r10{
+	margin-right: 10px;
+}
+/*精灵图,此处用的表达式来匹配一类相似的*/
+/*2倍图，解决图标失真问题*/
+/*图片尺寸两倍，然后再设置background-size 为图片的二分之一*/
+[class^="icon-"],[class*=" icon-"]{
+	background: url(../images/sprites.png) no-repeat;
+	background-size: 100px 600px;
+}
