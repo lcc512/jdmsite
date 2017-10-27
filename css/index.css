@@ -1,271 +1,334 @@
-body{
-	background-color: #f5f5f5;
+body {
+    background-color: #f5f5f5;
 }
+
+
 /*版心容器 所有页面都在它里面*/
-.jd-container{
-	width: 100%;
-	max-width: 640px;
-	min-width: 340px;
-	margin: 0 auto;
+
+.jd-container {
+    width: 100%;
+    max-width: 640px;
+    min-width: 340px;
+    margin: 0 auto;
 }
+
+
 /*顶部搜索*/
-.jd-search{
-	position: fixed;
-	z-index: 999;
-	left: 0;
-	top: 0;
-	width: 100%;
+
+.jd-search {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
+
+
 /*这里再次定义最大最小宽度是因为父元素fix浮动，浮动后脱离了版心容器*/
-.jd-search .jd-search-box{
-	width: 100%;
-	height: 40px;
-	max-width: 640px;
-	min-width: 340px;
-	margin: 0 auto;
-	background-color: rgba(242,48,48,0);
-	position: relative;
-}
-.jd-search .jd-search-box a{
-	position: absolute;
-	top: 0;
-}
-.jd-search .jd-search-box .icon-logo{
-	width: 60px;
-	height: 40px;
-	/*公用类实现了精灵图的引用，这里只用调位置*/
-	background-position: 0 0;
-	left: 0
-}
-.jd-search .jd-search-box .login{
-	width: 50px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-	color: #fff;
-	right: 0;
 
+.jd-search .jd-search-box {
+    width: 100%;
+    height: 40px;
+    max-width: 640px;
+    min-width: 340px;
+    margin: 0 auto;
+    background-color: rgba(242, 48, 48, 0);
+    position: relative;
 }
-.jd-search .jd-search-box form{
-	width: 100%;
-	padding-left: 60px;
-	padding-right: 50px;
+
+.jd-search .jd-search-box a {
+    position: absolute;
+    top: 0;
 }
-.jd-search .jd-search-box form input{
-	width: 100%;
-	height: 30px;
-	border-radius: 15px;
-	margin-top: 5px;
-	text-indent: 30px;
+
+.jd-search .jd-search-box .icon-logo {
+    width: 60px;
+    height: 40px;
+    /*公用类实现了精灵图的引用，这里只用调位置*/
+    background-position: 0 0;
+    left: 0
 }
-.jd-search .jd-search-box form .icon-search{
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	left: 70px;
-	top: 10px;
-	background-position: 0 -43px;
+
+.jd-search .jd-search-box .login {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    right: 0;
 }
+
+.jd-search .jd-search-box form {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 50px;
+}
+
+.jd-search .jd-search-box form input {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    text-indent: 30px;
+}
+
+.jd-search .jd-search-box form .icon-search {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    background-position: 0 -43px;
+}
+
+
 /*轮播图*/
-.jd-banner{
-	width: 100%;
-	position: relative;
-	overflow: hidden;
+
+.jd-banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
-.jd-banner ul:first-child{
-	/*要放十张图，所以宽度是1000%*/
-	width: 1000%;
-	transform: translateX(-10%);
-	-webkit-transform: translateX(-10%);
+
+.jd-banner ul:first-child {
+    /*要放十张图，所以宽度是1000%*/
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
 }
-.jd-banner ul:first-child li{
-	/*由于父元素ul的宽度是1000%，所以单个li宽度为父元素内容宽度的百分之十*/
-	width: 10%;
-	float: left;
+
+.jd-banner ul:first-child li {
+    /*由于父元素ul的宽度是1000%，所以单个li宽度为父元素内容宽度的百分之十*/
+    width: 10%;
+    float: left;
 }
-.jd-banner ul:first-child li a{
-	width: 100%;
-	display: block;
+
+.jd-banner ul:first-child li a {
+    width: 100%;
+    display: block;
 }
-.jd-banner ul:first-child li a img{
-	width: 100%;
-	display: block;
+
+.jd-banner ul:first-child li a img {
+    width: 100%;
+    display: block;
 }
-.jd-banner ul:last-child{
-	position: absolute;
-	bottom: 8px;
-	left: 50%;
-	/*宽度等于li宽加li的margin-left的总和再减去多余的一个margin-left*/
-	width: 118px;
-	margin-left: -59px;
-	/*以上三条实现ul居中定位*/
+
+.jd-banner ul:last-child {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    /*宽度等于li宽加li的margin-left的总和再减去多余的一个margin-left*/
+    width: 118px;
+    margin-left: -59px;
+    /*以上三条实现ul居中定位*/
 }
-.jd-banner ul:last-child li{
-	width: 6px;
-	height: 6px;
-	border-radius: 3px;
-	/*以上三行描绘出一个的空心圆*/
-	border: 1px solid #fff;
-	float: left;
-	margin-left: 10px;
+
+.jd-banner ul:last-child li {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    /*以上三行描绘出一个的空心圆*/
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10px;
 }
-.jd-banner ul:last-child li:first-child{
-	margin-left: 0;
+
+.jd-banner ul:last-child li:first-child {
+    margin-left: 0;
 }
-.jd-banner ul:last-child li.now{
-	background-color: #fff;
+
+.jd-banner ul:last-child li.now {
+    background-color: #fff;
 }
+
+
 /*导航栏*/
-.jd-nav{
-	width: 100%;
-	background-color: #fff;
+
+.jd-nav {
+    width: 100%;
+    background-color: #fff;
 }
-.jd-nav ul{
-	width: 100%;
-	padding:10px 0;
-	border-bottom: 1px solid #ccc;
+
+.jd-nav ul {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
-.jd-nav ul li{
-	width: 25%;
-	float: left;
+
+.jd-nav ul li {
+    width: 25%;
+    float: left;
 }
-.jd-nav ul li a{
-	display: block;
-	width: 100%;
+
+.jd-nav ul li a {
+    display: block;
+    width: 100%;
 }
-.jd-nav ul li a img{
-	display: block;
-	width: 40px;
-	height: 40px;
-	margin: 0 auto;
+
+.jd-nav ul li a img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
 }
-.jd-nav ul li a p{
-	color: #666;
-	font-size: 12px;
-	padding: 5px 0;
-	text-align: center;
+
+.jd-nav ul li a p {
+    color: #666;
+    font-size: 12px;
+    padding: 5px 0;
+    text-align: center;
 }
+
+
 /*商品区域*/
-.jd-product{
-	padding: 0 5px;
+
+.jd-product {
+    padding: 0 5px;
 }
+
+
 /*商品盒子*/
-.jd-proBox{
-	margin-top: 10px;
-	box-shadow: 0 0 1px #d8d8d8;
-	min-height: 200px;
-	background-color: #fff;
+
+.jd-proBox {
+    margin-top: 10px;
+    box-shadow: 0 0 1px #d8d8d8;
+    min-height: 200px;
+    background-color: #fff;
 }
-.jd-proBox .pro-title{
-	height: 34px;
-	line-height: 34px;
-	border-bottom: 1px solid #ddd;
+
+.jd-proBox .pro-title {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
 }
-.jd-proBox .pro-title.nob{
-	border-bottom: none;
+
+.jd-proBox .pro-title.nob {
+    border-bottom: none;
 }
-.jd-proBox .pro-title h3{
-	position: relative;
-	text-indent: 20px;
-	font-weight: normal;
+
+.jd-proBox .pro-title h3 {
+    position: relative;
+    text-indent: 20px;
+    font-weight: normal;
 }
-.jd-proBox .pro-title h3::before{
-	content: "";
-	position: absolute;
-	left: 10px;
-	top: 11px;
-	width: 3px;
-	height: 12px;
-	background-color: #f23030;
+
+.jd-proBox .pro-title h3::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    width: 3px;
+    height: 12px;
+    background-color: #f23030;
+}
+
+.jd-proBox .pro-con {}
 
 
-}
-.jd-proBox .pro-con{
-
-}
 /*组合样式*/
-.w-p50{
-	width: 50%;
-}
-.w-p50 img{
-	display: block;
-	width: 100%;
-}
-.b-left{
-	border-left: 1px solid #ddd;
-}
-.b-right{
-	border-right: 1px solid #ddd;
-}
-.b-bottom{
-	border-bottom: 1px solid #ddd;
-}
-/*秒杀*/
-.sk-icon{
-	width: 16px;
-	height: 20px;
-	float: left;
-	background: url(../images/miaosha.png) 0 0 no-repeat;
-	background-size: 16px 20px;
-	margin-top: 7px;
-	margin-left: 10px;
-}
-.sk-text{
-	color: #f23030;
-	margin-left: 10px;
-	float: left;
-}
-.sk-time{
-	float: left;
-	margin-left: 10px;
-}
-.sk-time span{
-	width: 16px;
-	height: 16px;
-	text-align: center;
-	line-height: 16px;
-	color: #fff;
-	background-color: #000;
-	margin-left: 3px;
-	margin-top: 7px;
-	float: left;
-}
-.sk-time span:nth-child(3n){
-	background-color: #fff;
-	color: #000;
-	width: 3px;
-}
-/*秒杀的内容商品*/
-.sk-product{
-	width: 100%;
-}
-.sk-product li{
-	width: 33.333%;
-	float: left;
-}
-.sk-product li a{
-	width: 100%;
-	display: block;
-	border-left: 1px solid #ddd;
 
+.w-p50 {
+    width: 50%;
 }
-.sk-product li:first-child a{
-	border: none;
+
+.w-p50 img {
+    display: block;
+    width: 100%;
 }
-.sk-product li a img{
-	width: 64%;
-	margin: 0 auto;
-	display: block;
+
+.b-left {
+    border-left: 1px solid #ddd;
 }
-.sk-product li p{
-	font-size: 12px;
-	text-align: center;
-	padding: 5px 0;
+
+.b-right {
+    border-right: 1px solid #ddd;
 }
-.sk-product li .now-price{
-	color: #f23030;
+
+.b-bottom {
+    border-bottom: 1px solid #ddd;
 }
-.sk-product li .old-price{
-	color: #666;
-	text-decoration: line-through;
+
+
+/*秒杀*/
+
+.sk-icon {
+    width: 16px;
+    height: 20px;
+    float: left;
+    background: url(../images/miaosha.png) 0 0 no-repeat;
+    background-size: 16px 20px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.sk-text {
+    color: #f23030;
+    margin-left: 10px;
+    float: left;
+}
+
+.sk-time {
+    float: left;
+    margin-left: 10px;
+}
+
+.sk-time span {
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    background-color: #000;
+    margin-left: 3px;
+    margin-top: 7px;
+    float: left;
+}
+
+.sk-time span:nth-child(3n) {
+    background-color: #fff;
+    color: #000;
+    width: 3px;
+}
+
+
+/*秒杀的内容商品*/
+
+.sk-product {
+    width: 100%;
+}
+
+.sk-product li {
+    width: 33.333%;
+    float: left;
+}
+
+.sk-product li a {
+    width: 100%;
+    display: block;
+    border-left: 1px solid #ddd;
+}
+
+.sk-product li:first-child a {
+    border: none;
+}
+
+.sk-product li a img {
+    width: 64%;
+    margin: 0 auto;
+    display: block;
+}
+
+.sk-product li p {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.sk-product li .now-price {
+    color: #f23030;
+}
+
+.sk-product li .old-price {
+    color: #666;
+    text-decoration: line-through;
 }
