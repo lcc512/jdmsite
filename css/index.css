@@ -23,7 +23,7 @@ body{
 	max-width: 640px;
 	min-width: 340px;
 	margin: 0 auto;
-	background-color: #f23030;
+	background-color: rgba(242,48,48,0);
 	position: relative;
 }
 .jd-search .jd-search-box a{
