@@ -1,7 +1,7 @@
 body{
 	background-color: #f5f5f5;
 }
-/*版心容器*/
+/*版心容器 所有页面都在它里面*/
 .jd-container{
 	width: 100%;
 	max-width: 640px;
@@ -16,6 +16,7 @@ body{
 	top: 0;
 	width: 100%;
 }
+/*这里再次定义最大最小宽度是因为父元素fix浮动，浮动后脱离了版心容器*/
 .jd-search .jd-search-box{
 	width: 100%;
 	height: 40px;
@@ -163,7 +164,42 @@ body{
 .jd-proBox .pro-title.nob{
 	border-bottom: none;
 }
-.jd-proBox .pro-con{}
+.jd-proBox .pro-title h3{
+	position: relative;
+	text-indent: 20px;
+	font-weight: normal;
+}
+.jd-proBox .pro-title h3::before{
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 11px;
+	width: 3px;
+	height: 12px;
+	background-color: #f23030;
+
+
+}
+.jd-proBox .pro-con{
+
+}
+/*组合样式*/
+.w-p50{
+	width: 50%;
+}
+.w-p50 img{
+	display: block;
+	width: 100%;
+}
+.b-left{
+	border-left: 1px solid #ddd;
+}
+.b-right{
+	border-right: 1px solid #ddd;
+}
+.b-bottom{
+	border-bottom: 1px solid #ddd;
+}
 /*秒杀*/
 .sk-icon{
 	width: 16px;
