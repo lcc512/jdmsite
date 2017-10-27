@@ -40,13 +40,6 @@ var search = function() {
 }
 var banner = function() {
 
-
-
-
-
-
-
-
     var banner = document.querySelector('.jd-banner');
     // 轮播图宽度
     var width = banner.offsetWidth;
@@ -72,9 +65,6 @@ var banner = function() {
         imageBox.style.webkitTransform = 'translateX(' + translateX + 'px)';
     }
 
-
-
-
     var index = 1;
     var timer = setInterval(function() {
 
@@ -85,7 +75,7 @@ var banner = function() {
         setTranslateX(-index * width);
 
 
-    }, 1500);
+    }, 3000);
 
     // 监听过渡动画结束的这个时间点，过渡事件结束
     imageBox.addEventListener('transitionend', function() {
@@ -135,11 +125,13 @@ var banner = function() {
         var translateX = -index * width + distanceX;
         removeTransition();
         setTranslateX(translateX);
+
+        isMove = true;
         // 清除定时器
         clearInterval(timer);
-        isMove = true;
     });
     imageBox.addEventListener('touchend', function(e) {
+
         // 滑动事件结束之后判断滑动距离
         if (isMove) {
             //且滑动不到一半时回退原来位置，（过渡，位移）
@@ -152,22 +144,36 @@ var banner = function() {
                 addTransition();
 
                 if (distanceX > 0) {
-                	index--;
-                    addTransition();
-                    setTranslateX(-index * width);
-                } else if (distanceX < 0) {
-                	index++;
-                    addTransition();
-                    setTranslateX(-index * width);
-                }
+                    index--;
 
+                } else if (distanceX < 0) {
+                    index++;
+
+                }
+                setTranslateX(-index * width);
             }
         }
+        // 严谨，先清除定时器，再加上定时器
+        timer = setInterval(function() {
+
+            index++;
+            // 过渡
+            addTransition();
+            // 位移
+            setTranslateX(-index * width);
 
 
+        }, 3000);
 
+        // 重置参数
+        startX = 0;
+        distanceX = 0;
+        isMove = false;
 
     });
+
+
+
 
 }
 
