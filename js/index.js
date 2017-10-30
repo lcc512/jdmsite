@@ -183,7 +183,9 @@ var banner = function() {
 
 var downTime = function() {
 
-    var time = 11 * 60 * 60;
+    // var time = 11 * 60 * 60;
+
+    var time=11;
 
     var skTime = document.querySelector('.sk-time');
 
@@ -217,11 +219,14 @@ var downTime = function() {
 
         time--;
 
+        if (time < 0) {
+        clearInterval(timer);
+        skTime.style.backgroundColor= "red";
+    	}
+
 
     }, 1000);
 
-    if (time <= 0) {
-        clearInterval(timer);
-    }
+    
 
 }

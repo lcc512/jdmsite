@@ -1,0 +1,142 @@
+/*全屏*/
+
+.jd-category {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.jd-topBar {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.jd-topBar a {
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    line-height: 44px;
+}
+
+.jd-topBar .icon-back {
+    left: 0;
+}
+
+.jd-topBar .icon-menu {
+    right: 0;
+}
+
+.jd-topBar form {
+    height: 44px;
+    padding: 0 40px;
+}
+
+.jd-topBar form input {
+    margin-top: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 100%;
+    height: 30px;
+
+}
+
+.jd-main {
+    padding-top: 45px;
+    width: 100%;
+    height: 100%;
+    /*overflow: scroll;*/
+}
+
+
+/*两栏布局的一种方法，左固定宽度，左浮动，右设置overflow：：hidden*/
+
+.cate-left {
+    width: 90px;
+    height: 100%;
+    float: left;
+    background-color: #f2f2f2;
+}
+.cate-left ul{
+	width: 90px;
+}
+.cate-left ul li{
+	font-size: 12px;
+	line-height: 50px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.cate-left ul li a{
+	/*单独一个a标签的触点有效范围小（字符范围），block以后就是一整块范围*/
+	display: block;
+}
+.cate-left ul li.now{
+	border-right: none;
+	background-color: #fff;
+}
+.cate-left ul li.now a{
+	color: #f02b2b;
+}
+
+
+.cate-right {
+
+    overflow: hidden;
+    height: 100%;
+
+}
+.cate-right-box{
+	width: 100%;
+	padding: 0 10px;
+}
+.cate-right-box .banner{
+	display: block;
+	margin-top: 10px;
+	width: 100%;
+}
+.cate-right-box .banner img{
+	display: block;
+	width: 100%;
+	height: 100px;
+}
+.cate-right-box .hot-category{
+	margin-top: 10px;
+}
+.cate-right-box .hot-category h3{
+	font-size: 12px;
+}
+.cate-right-box .hot-category ul{
+	width: 100%;
+	padding: 10px 0;
+}
+.cate-right-box .hot-category ul li{
+	width: 33.333%;
+	float: left;
+}
+.cate-right-box .hot-category ul li a{
+	width: 100%;
+	display: block;
+}
+.cate-right-box .hot-category ul li a img{
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
+.cate-right-box .hot-category ul li a p{
+	padding: 10px 0;
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+}
+
