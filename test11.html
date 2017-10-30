@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		div{
+			background-color: blue;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>测试文档</title>
+</head>
+<body>
+	<div>sdf</div>
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		window.onload=function(){
+
+			test1();
+		}
+
+		var test1=function(){
+
+			
+			var div1=document.querySelector('div');
+			var startTime=0;
+			var isFlag=false;
+
+			div1.addEventListener('touchstart',function(){
+
+				startTime=Date.now();
+				console.time('time');
+
+			});
+			div1.addEventListener('touchmove',function(){
+
+			});
+			div1.addEventListener('touchend',function(){
+				console.timeEnd('time');
+
+				var str1=console.log(Date.now()-startTime);
+
+
+				div1.innerText=str1;
+
+
+			});
+
+		};
+		
+	</script>
+</body>
+</html>
