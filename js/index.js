@@ -183,4 +183,45 @@ var banner = function() {
 
 var downTime = function() {
 
+    var time = 11 * 60 * 60;
+
+    var skTime = document.querySelector('.sk-time');
+
+    var spans = skTime.querySelectorAll('span');
+
+    var hour = Math.floor(time / 3600);
+
+    var minute = Math.floor(time % 3600 / 60);
+
+    var second = time % 60;
+
+
+
+    var timer = setInterval(function() {
+
+
+        hour = Math.floor(time / 3600);
+
+        minute = Math.floor(time % 3600 / 60);
+
+        second = time % 60;
+
+        spans[0].innerHTML = Math.floor(hour / 10);
+        spans[1].innerHTML = hour % 10;
+
+        spans[3].innerHTML = Math.floor(minute / 10);
+        spans[4].innerHTML = minute % 10;
+
+        spans[6].innerHTML = Math.floor(second / 10);
+        spans[7].innerHTML = second % 10;
+
+        time--;
+
+
+    }, 1000);
+
+    if (time <= 0) {
+        clearInterval(timer);
+    }
+
 }
