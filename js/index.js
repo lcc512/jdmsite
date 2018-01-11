@@ -78,7 +78,7 @@ var banner = function () {
 
     }, 3000);
 
-    // 监听过渡动画结束的这个时间点，过渡事件结束
+    // 监听 过渡动画结束的这个时间点，过渡事件结束
     // 'transitionend' 过渡结束调用的事件
     // animationend 动画结束事件
     imageBox.addEventListener('transitionend', function () {
