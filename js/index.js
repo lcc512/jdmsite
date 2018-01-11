@@ -15,11 +15,11 @@ var search = function () {
 
     var search = document.querySelector('.jd-search-box');
     var banner = document.querySelector('.jd-banner');
-    var height = banner.offsetHeight; //获取元素高度
+    var height = banner.offsetHeight; //获取轮播图元素高度
 
-    // 监听滚动事件,以滚动就触发
+    // 监听滚动事件,一滚动就触发
     window.onscroll = function () {
-        console.log('0');
+        console.log('1');
         // 获取当前页面滚动的距离
         var top = document.body.scrollTop; //谷歌
         // var top=document.documentElement.scrollTop;//IE
@@ -38,6 +38,7 @@ var search = function () {
 
 
 };
+// 轮播图滚动
 var banner = function () {
 
     var banner = document.querySelector('.jd-banner');
@@ -78,11 +79,14 @@ var banner = function () {
     }, 3000);
 
     // 监听过渡动画结束的这个时间点，过渡事件结束
+    // 'transitionend' 过渡结束调用的事件
+    // animationend 动画结束事件
     imageBox.addEventListener('transitionend', function () {
         // 无缝自动滚动
         if (index >= 9) {
             // 瞬间定位到第一张
             index = 1;
+            // 需要瞬间定位，所以清除过渡动画
             // 清除过渡,然后定位
             removeTransition();
             setTranslateX(-index * width);
@@ -115,6 +119,7 @@ var banner = function () {
 
     imageBox.addEventListener('touchstart', function (e) {
         // 记录开始的位置
+        console.log(e);
         startX = e.touches[0].clientX;
     });
 
