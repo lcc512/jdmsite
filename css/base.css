@@ -1,65 +1,75 @@
 /*reset css 重置样式*/
 *,
 ::before,
-::after{
-	/*选中所有的元素和伪元素*/
-	margin: 0;
-	padding: 0;
-	/*针对移动端的*/
-	// 怪异盒模型
-	box-sizing: border-box; 
-	/*兼容主流浏览器*/
-	-webkit-box-sizing: border-box;
-	/*点击高亮效果 值透明，颜色的话就是这个颜色的效果*/
-	-webkit-tap-highlight-color:transparent;
+::after {
+    /*选中所有的元素和伪元素*/
+    margin: 0;
+    padding: 0;
+    /*针对移动端的*/
+/ / 怪异盒模型 box-sizing: border-box;
+    /*兼容主流浏览器*/
+    -webkit-box-sizing: border-box;
+    /*点击高亮效果 值透明，颜色的话就是这个颜色的效果*/
+    -webkit-tap-highlight-color: transparent;
 }
-body{
-	font-size: 14px;
-	color: #333;
-	font-family: 'Microsoft Yahei';
+
+body {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Microsoft Yahei';
 }
-ul, ol{
-	list-style: none;
+
+ul, ol {
+    list-style: none;
 }
-a{
-	text-decoration: none;
-	color: #333;
+
+a {
+    text-decoration: none;
+    color: #333;
 }
-input,textarea{
-	outline: none;
-	border: none;
-	/*不允许右下角的拖动改变框大小的功能*/
-	resize: none;
-	/*清除掉默认的属性*/
-	-webkit-appearance:none;
+
+input, textarea {
+    outline: none;
+    border: none;
+    /*不允许右下角的拖动改变框大小的功能*/
+    resize: none;
+    /*清除掉默认的属性*/
+    -webkit-appearance: none;
 }
+
 /*common css 公用样式*/
-.fl{
-	float: left;
+.fl {
+    float: left;
 }
-.fr{
-	float: right;
+
+.fr {
+    float: right;
 }
-.clearfix::before, .clearfix:after{
-	content: "";
-	display: block;
-	height: 0;
-	line-height: 0;
-	visibility: hidden;
-	clear: both;
+
+.clearfix::before, .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
 }
-.m-l10{
-	margin-left: 10px;
+
+.m-l10 {
+    margin-left: 10px;
 }
-.m-r10{
-	margin-right: 10px;
+
+.m-r10 {
+    margin-right: 10px;
 }
+
 /*精灵图,此处用的表达式来匹配一类相似的*/
 /*一种是icon-开头，一种是icon这个类写在后面*/
 /*2倍图，解决图标失真问题*/
 /*图片尺寸两倍，然后再设置background-size 为图片的二分之一*/
-[class^="icon-"],[class*=" icon-"]{
-	background: url(../images/sprites.png) no-repeat;
-	background-size: 100px 600px;
+[class^="icon-"], [class*=" icon-"] {
+    background: url(../images/sprites.png) no-repeat;
+    background-size: 100px 600px;
 }
+
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2UuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGtCQUFrQjtBQUNsQjs7O0NBR0MsZUFBZTtDQUNmLFVBQVU7Q0FDVixXQUFXO0NBQ1gsVUFBVTtDQUNWO3dCQUN1QjtDQUN2QixXQUFXO0NBQ1gsK0JBQStCO0NBQy9CLDRCQUE0QjtDQUM1Qix3Q0FBd0M7Q0FDeEM7QUFDRDtDQUNDLGdCQUFnQjtDQUNoQixZQUFZO0NBQ1osK0JBQStCO0NBQy9CO0FBQ0Q7Q0FDQyxpQkFBaUI7Q0FDakI7QUFDRDtDQUNDLHNCQUFzQjtDQUN0QixZQUFZO0NBQ1o7QUFDRDtDQUNDLGNBQWM7Q0FDZCxhQUFhO0NBQ2IscUJBQXFCO0NBQ3JCLGFBQWE7Q0FDYixZQUFZO0NBQ1osd0JBQXdCO0NBQ3hCO0FBQ0QsbUJBQW1CO0FBQ25CO0NBQ0MsWUFBWTtDQUNaO0FBQ0Q7Q0FDQyxhQUFhO0NBQ2I7QUFDRDtDQUNDLFlBQVk7Q0FDWixlQUFlO0NBQ2YsVUFBVTtDQUNWLGVBQWU7Q0FDZixtQkFBbUI7Q0FDbkIsWUFBWTtDQUNaO0FBQ0Q7Q0FDQyxrQkFBa0I7Q0FDbEI7QUFDRDtDQUNDLG1CQUFtQjtDQUNuQjtBQUNELHVCQUF1QjtBQUN2Qiw2QkFBNkI7QUFDN0IsZ0JBQWdCO0FBQ2hCLHdDQUF3QztBQUN4QztDQUNDLGlEQUFpRDtDQUNqRCw2QkFBNkI7Q0FDN0IiLCJmaWxlIjoiYmFzZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKnJlc2V0IGNzcyDph43nva7moLflvI8qL1xyXG4qLFxyXG46OmJlZm9yZSxcclxuOjphZnRlcntcclxuXHQvKumAieS4reaJgOacieeahOWFg+e0oOWSjOS8quWFg+e0oCovXHJcblx0bWFyZ2luOiAwO1xyXG5cdHBhZGRpbmc6IDA7XHJcblx0Lyrpkojlr7nnp7vliqjnq6/nmoQqL1xyXG5cdC8vIOaAquW8guebkuaooeWei1xyXG5cdGJveC1zaXppbmc6IGJvcmRlci1ib3g7IFxyXG5cdC8q5YW85a655Li75rWB5rWP6KeI5ZmoKi9cclxuXHQtd2Via2l0LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcblx0Lyrngrnlh7vpq5jkuq7mlYjmnpwg5YC86YCP5piO77yM6aKc6Imy55qE6K+d5bCx5piv6L+Z5Liq6aKc6Imy55qE5pWI5p6cKi9cclxuXHQtd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6dHJhbnNwYXJlbnQ7XHJcbn1cclxuYm9keXtcclxuXHRmb250LXNpemU6IDE0cHg7XHJcblx0Y29sb3I6ICMzMzM7XHJcblx0Zm9udC1mYW1pbHk6ICdNaWNyb3NvZnQgWWFoZWknO1xyXG59XHJcbnVsLCBvbHtcclxuXHRsaXN0LXN0eWxlOiBub25lO1xyXG59XHJcbmF7XHJcblx0dGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG5cdGNvbG9yOiAjMzMzO1xyXG59XHJcbmlucHV0LHRleHRhcmVhe1xyXG5cdG91dGxpbmU6IG5vbmU7XHJcblx0Ym9yZGVyOiBub25lO1xyXG5cdC8q5LiN5YWB6K645Y+z5LiL6KeS55qE5ouW5Yqo5pS55Y+Y5qGG5aSn5bCP55qE5Yqf6IO9Ki9cclxuXHRyZXNpemU6IG5vbmU7XHJcblx0LyrmuIXpmaTmjonpu5jorqTnmoTlsZ7mgKcqL1xyXG5cdC13ZWJraXQtYXBwZWFyYW5jZTpub25lO1xyXG59XHJcbi8qY29tbW9uIGNzcyDlhaznlKjmoLflvI8qL1xyXG4uZmx7XHJcblx0ZmxvYXQ6IGxlZnQ7XHJcbn1cclxuLmZye1xyXG5cdGZsb2F0OiByaWdodDtcclxufVxyXG4uY2xlYXJmaXg6OmJlZm9yZSwgLmNsZWFyZml4OmFmdGVye1xyXG5cdGNvbnRlbnQ6IFwiXCI7XHJcblx0ZGlzcGxheTogYmxvY2s7XHJcblx0aGVpZ2h0OiAwO1xyXG5cdGxpbmUtaGVpZ2h0OiAwO1xyXG5cdHZpc2liaWxpdHk6IGhpZGRlbjtcclxuXHRjbGVhcjogYm90aDtcclxufVxyXG4ubS1sMTB7XHJcblx0bWFyZ2luLWxlZnQ6IDEwcHg7XHJcbn1cclxuLm0tcjEwe1xyXG5cdG1hcmdpbi1yaWdodDogMTBweDtcclxufVxyXG4vKueyvueBteWbvizmraTlpITnlKjnmoTooajovr7lvI/mnaXljLnphY3kuIDnsbvnm7jkvLznmoQqL1xyXG4vKuS4gOenjeaYr2ljb24t5byA5aS077yM5LiA56eN5pivaWNvbui/meS4quexu+WGmeWcqOWQjumdoiovXHJcbi8qMuWAjeWbvu+8jOino+WGs+Wbvuagh+Wkseecn+mXrumimCovXHJcbi8q5Zu+54mH5bC65a+45Lik5YCN77yM54S25ZCO5YaN6K6+572uYmFja2dyb3VuZC1zaXplIOS4uuWbvueJh+eahOS6jOWIhuS5i+S4gCovXHJcbltjbGFzc149XCJpY29uLVwiXSxbY2xhc3MqPVwiIGljb24tXCJde1xyXG5cdGJhY2tncm91bmQ6IHVybCguLi9pbWFnZXMvc3ByaXRlcy5wbmcpIG5vLXJlcGVhdDtcclxuXHRiYWNrZ3JvdW5kLXNpemU6IDEwMHB4IDYwMHB4O1xyXG59Il19 */
