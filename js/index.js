@@ -86,7 +86,7 @@ var banner = function () {
         if (index >= 9) {
             // 瞬间定位到第一张
             index = 1;
-            // 需要瞬间定位，所以清除过渡动画
+            // 需要瞬间定位，所以清除 过渡动画
             // 清除过渡,然后定位
             removeTransition();
             setTranslateX(-index * width);
