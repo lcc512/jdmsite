@@ -77,7 +77,6 @@ var banner = function () {
 
 
     }, 3000);
-
     // 监听 过渡动画结束的这个时间点，过渡事件结束
     // 'transitionend' 过渡结束调用的事件
     // animationend 动画结束事件
@@ -142,6 +141,7 @@ var banner = function () {
             //且滑动不到一半时回退原来位置，（过渡，位移）
             if (Math.abs(distanceX) < width / 3) {
                 addTransition();
+                // 不管之前在哪儿，必须要移动到这个要求的位置，整个动画0.2s
                 setTranslateX(-index * width);
             }
             // 当滑动距离够，跳转上一张or跳转下一张（判断方向，过渡，位移）
@@ -155,10 +155,12 @@ var banner = function () {
                     index++;
 
                 }
+                // 不管之前在哪儿，必须要移动到这个要求的位置，整个动画0.2s
                 setTranslateX(-index * width);
             }
         }
-        // 严谨，先清除定时器，再加上定时器
+        // 严谨，先清除定时器，再加上定时器,保证只加一次
+        clearInterval(timer);
         timer = setInterval(function () {
 
             index++;
@@ -180,17 +182,18 @@ var banner = function () {
 
 };
 
-
+// 倒计时
 var downTime = function () {
 
     // var time = 11 * 60 * 60;
 
-    var time = 11;
+    var time = 100;
 
     var skTime = document.querySelector('.sk-time');
 
     var spans = skTime.querySelectorAll('span');
 
+    // 向下取整
     var hour = Math.floor(time / 3600);
 
     var minute = Math.floor(time % 3600 / 60);

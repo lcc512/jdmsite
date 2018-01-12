@@ -1,7 +1,9 @@
 /*全屏*/
 
+/*实现全屏容器*/
 .jd-category {
     position: fixed;
+    /*那么宽100% 高100% 就是基于浏览器的基准*/
     width: 100%;
     height: 100%;
 }
