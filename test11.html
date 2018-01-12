@@ -2,17 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 	<style type="text/css">
-		div{
-			background-color: blue;
-			width: 200px;
-			height: 200px;
+		/*div{*/
+			/*background-color: blue;*/
+			/*width: 200px;*/
+			/*height: 200px;*/
+		/*}*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+		.div1{
+			width: 50px;
+			height: 100%;
+			background-color: #cccccc;
+			float: left;
 		}
+		.div2{
+			height: 100%;
+			background-color: azure;
+			overflow: hidden;
+		}
+		
 	</style>
 	<title>测试文档</title>
 </head>
 <body>
-	<div>sdf</div>
+
+<div style="position:fixed; width: 100%; height: 100%;">
+	<div class="div1"><span>123213123</span></div>
+	<div class="div2"><span>汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字汉字</span></div>
+</div>
 
 
 
@@ -22,41 +43,42 @@
 
 
 
-	<script type="text/javascript">
-		window.onload=function(){
 
-			test1();
-		}
+	<!--<script type="text/javascript">-->
+		<!--window.onload=function(){-->
 
-		var test1=function(){
+			<!--test1();-->
+		<!--}-->
 
-			
-			var div1=document.querySelector('div');
-			var startTime=0;
-			var isFlag=false;
+		<!--var test1=function(){-->
 
-			div1.addEventListener('touchstart',function(){
+			<!---->
+			<!--var div1=document.querySelector('div');-->
+			<!--var startTime=0;-->
+			<!--var isFlag=false;-->
 
-				startTime=Date.now();
-				console.time('time');
+			<!--div1.addEventListener('touchstart',function(){-->
 
-			});
-			div1.addEventListener('touchmove',function(){
+				<!--startTime=Date.now();-->
+				<!--console.time('time');-->
 
-			});
-			div1.addEventListener('touchend',function(){
-				console.timeEnd('time');
+			<!--});-->
+			<!--div1.addEventListener('touchmove',function(){-->
 
-				var str1=console.log(Date.now()-startTime);
+			<!--});-->
+			<!--div1.addEventListener('touchend',function(){-->
+				<!--console.timeEnd('time');-->
 
-
-				div1.innerText=str1;
+				<!--var str1=console.log(Date.now()-startTime);-->
 
 
-			});
+				<!--div1.innerText=str1;-->
 
-		};
-		
-	</script>
+
+			<!--});-->
+
+		<!--};-->
+		<!---->
+	<!--</script>-->
 </body>
 </html>
